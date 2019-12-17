@@ -14,7 +14,7 @@ export default class Landing extends Component {
                             </li>
 
                             <li>
-                                <Link to="/">Cars</Link>
+                                <Link to="/cars">Cars</Link>
                             </li>
 
                             <li>
