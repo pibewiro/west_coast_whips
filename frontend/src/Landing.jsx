@@ -1,35 +1,28 @@
 import React, { Component } from 'react'
-import {Link} from "react-router-dom"
+import Navbar from "./Navbar"
 
 export default class Landing extends Component {
+
+    login = () => {
+        this.props.history.push("/login")
+    }
+
+
+    register = () => {
+        this.props.history.push("/register")
+    }
+
     render() {
         return (
             <div>
-                <div id="navbar">
-                    <div className="navbar-container">
-                        <h1>West Coast Whips</h1>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/cars">Cars</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/">Contact</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <Navbar />
 
                 <div id="showcase">
                     <div className="showcase-content">
                         <h1>West Coast Whips</h1>
                             <div className="btn-div">
-                                <button class="btn">Login</button>
-                                <button class="btn">Register</button>
+                                <button class="btn" onClick={this.login}>Login</button>
+                                <button class="btn" onClick={this.register}>Register</button>
                             </div>
                     </div>
                 </div>
@@ -66,7 +59,7 @@ export default class Landing extends Component {
                         </div>
 
                         <div className="btn-div">
-                            <button className="btn2">Enter</button>
+                            <button className="btn2" onClick={this.register}>Enter</button>
                         </div>
                     </form>
                 </div>
