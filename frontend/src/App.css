@@ -1,0 +1,232 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primaryColor:#243249;
+  --hoverColor:#1A5873;
+}
+
+.btn
+{
+  padding: 10px 30px;
+  background: var(--primaryColor);
+  color:#fff;
+  border: none;
+  font-weight: bold;
+}
+
+.btn2
+{
+  padding: 10px 30px;
+  background: var(--hoverColor);
+  color:#fff;
+  border: none;
+  font-weight: bold;
+}
+
+.btn:hover
+{
+  background: var(--hoverColor);
+  cursor: pointer;
+}
+
+.btn2:hover
+{
+  background: var(--primaryColor);
+  cursor: pointer;
+  border:1px solid var(--hoverColor)
+}
+
+
+#navbar
+{
+  background: var(--primaryColor);
+  color:#fff;
+}
+
+.navbar-container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin:0 auto;
+  background: var(--primaryColor);
+}
+
+.navbar-container ul
+{
+  display: flex;
+}
+
+.navbar-container ul li
+{
+  padding: 20px;
+  list-style: none;
+}
+
+.navbar-container ul li a
+{
+  text-decoration: none;
+  color:#fff;
+  font-weight: bold;
+}
+
+.navbar-container ul li:hover
+{
+  background:var(--hoverColor);
+}
+
+.navbar-container h1
+{
+  letter-spacing: 3px;
+}
+
+#showcase
+{
+  height: 50vh;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #333;
+}
+
+#showcase:before
+{
+  content:"";
+  background:url("./trucksSC.jpg") no-repeat center center/cover;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  opacity: 0.4;
+
+}
+
+.showcase-content
+{
+  z-index: 1;
+}
+
+.showcase-content h1
+{
+  font-size:60px;
+  color:#fff;
+  letter-spacing: 3px;
+}
+
+.btn-div
+{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-div button
+{
+  margin:10px;
+}
+
+#info-content
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+#info-content div
+{
+  background:var(--primaryColor);
+  margin: 0 20px;
+  width: 25%;
+  border-radius: 10px;
+  color:#fff;
+  box-shadow: 10px 10px 20px #888888;
+}
+
+#info-content div:hover
+{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#info-content div img
+{
+  width: 100%;
+  height: 200px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#info-content div h2
+{
+  text-align: center;
+  padding:10px;
+  letter-spacing: 3px;
+}
+
+#special
+{
+  background:var(--primaryColor);
+  padding: 20px;
+  color:#fff;
+}
+
+#special h1
+{
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+#special form
+{
+  width:50%;
+  margin: 0 auto;
+}
+
+.form-group
+{
+  margin-bottom:20px;
+}
+
+.form-group label
+{
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input
+{
+  width:100%;
+  font-size:15px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+#footer
+{
+  text-align: center;
+  font-size:15px;
+  font-weight:bold;
+  padding: 10px;
+  background: var(--primaryColor);
+  border-top:1px solid var(--hoverColor);
+  color:#fff
+}
+
+
+
+
+
+
+
+
+
+
