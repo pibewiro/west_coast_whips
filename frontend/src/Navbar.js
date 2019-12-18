@@ -3,10 +3,15 @@ import {Link} from "react-router-dom"
 
 
 export default class Navbar extends Component {
+
+    
     render() {
         return (
         <div id="navbar">
+
             <div className="navbar-container">
+            <input type="checkbox" id="toggle" class="check" />
+            <label for="toggle" className="toggleLabel">&#9776;</label>
                 <h1><img class="logo" src="download.png" alt=""/>
                     West Coast Whips</h1>
                 <ul>
@@ -19,7 +24,7 @@ export default class Navbar extends Component {
                     </li>
 
                     <li>
-                        <Link to="/">Contact</Link>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
             </div>

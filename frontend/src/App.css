@@ -17,6 +17,7 @@
   color:#fff;
   border: none;
   font-weight: bold;
+  box-shadow: 5px 5px 10px #000;
 }
 
 .btn2
@@ -26,6 +27,8 @@
   color:#fff;
   border: none;
   font-weight: bold;
+  border: 1px solid transparent;
+  box-shadow: 5px 5px 10px #000;
 }
 
 .btn:hover
@@ -38,7 +41,8 @@
 {
   background: var(--primaryColor);
   cursor: pointer;
-  border:1px solid var(--hoverColor)
+  border:1px solid var(--hoverColor);
+  color: var(--hoverColor);
 }
 
 
@@ -65,7 +69,6 @@
 
 .navbar-container ul li
 {
-  padding: 20px;
   list-style: none;
 }
 
@@ -74,11 +77,16 @@
   text-decoration: none;
   color:var(--bgColor);
   font-weight: bold;
+  padding: 20px;
+  display: block;
+
 }
 
 .navbar-container ul li:hover
 {
   background:var(--hoverColor);
+  cursor: pointer;
+
 }
 
 .navbar-container h1
@@ -127,6 +135,7 @@
 {
   display: flex;
   justify-content: center;
+
 }
 
 .btn-div button
@@ -185,11 +194,12 @@
 {
   text-align: center;
   letter-spacing: 3px;
+  padding-bottom: 20px;
 }
 
 #special form
 {
-  width:50%;
+  width:25%;
   margin: 0 auto;
 }
 
@@ -211,7 +221,8 @@
   border-radius: 5px;
   border: none;
   padding: 5px;
-  background:#fff
+  background:#fff;
+  box-shadow: 5px 5px 10px #000;
 }
 
 #footer
@@ -231,8 +242,7 @@
   width: 70%;
   margin:0 auto;
   border:1px solid #000;
-  min-height: 300px;
-  position: absolute;
+  min-height: 600px;
   box-shadow: 10px 10px 20px#888888;
 }
 
@@ -242,6 +252,10 @@
   width:50%;
   background: var(--primaryColor);
   color:var(--bgColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #login .form-div input
@@ -300,25 +314,123 @@ form
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   background: var(--bgColor);
 }
-
-/* .center:before 
-{
-  content:"";
-  position: relative;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  opacity: 0.3;
-} */
 
 .logo{
   width: 80px;
   height: 50px;
   margin-right:10px;
+}
+
+.check
+{
+  display: none;
+}
+
+.toggleLabel
+{
+  display:none;
+}
+
+
+@media(max-width:700px)
+{
+  #navbar
+  {
+    padding: 10px;
+  }
+
+  #navbar div h1
+  {
+    margin-left: 40px;
+    font-size:20px;
+  }
+
+  #navbar div ul
+  {
+    position: absolute;
+    width: 100%;
+    top:70px;
+    left: 0;
+    z-index: 999;
+    background: var(--primaryColor);
+    display: none;
+  }
+
+  #toggle:checked ~ ul
+  {
+    display: block;
+  }
+
+  .toggleLabel  
+  {
+    display: flex;
+    position: absolute;
+    top:10px;
+    left:10px;
+    height: 50px;
+    align-items: center;
+    font-size:35px;
+    color:var(--bgColor);
+    padding: 0 10px;
+    background: var(--hoverColor);
+  }
+
+  .showcase-content h1 
+  {
+    font-size:40px;
+    text-align: center;
+  }
+
+  #info-content
+  {
+    display: block;
+  }
+
+  #info-content div
+  {
+    width: 100%;
+    margin:0 0 20px 0;
+  }
+
+  #special form
+  {
+    width:100%;
+    margin: 0 auto;
+  }
+
+  #login-content
+  {
+    display:block;
+    height:100%;
+    overflow: hidden;
+  }
+
+  .center
+  {
+    display: block;
+    height:88.4vh;
+  }
+
+  #login
+  {
+    width:100%;
+  }
+
+  #login .login-info
+  {
+    display:none;
+    height:20%;
+  }
+
+  #login .form-div
+  {
+    width:90%;
+    margin: 60px auto 0 auto;
+    height: 400px;
+    box-shadow: 10px 10px 20px #888888;
+  }
 }
 
 
