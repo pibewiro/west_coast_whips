@@ -2,6 +2,22 @@ import React, { Component } from 'react'
 import Navbar from "./Navbar"
 
 export default class Login extends Component {
+
+    constructor()
+    {
+        super()
+
+        this.state = {
+            ue:"",
+            errorName:""
+        }
+    }
+
+    ue = (e) => {
+        e.preventDefault();
+        alert(123)
+    }
+
     render() {
         return (
             <div id="login-content">
@@ -13,16 +29,16 @@ export default class Login extends Component {
                             <form action="">
                                 <div className="form-group">
                                     <label htmlFor="username">Username/Email</label>
-                                    <input type="text"/>
+                                    <input type="text" id="ue"/>
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="username">Password</label>
-                                    <input type="text"/>
+                                    <input type="password"/>
                                 </div>
 
                                 <div className="btn-div">
-                                    <button className="btn2">Enter</button>
+                                    <button className="btn2" onClick={this.ue}>Enter</button>
                                 </div>
                             </form>
                         </div>
