@@ -24,7 +24,8 @@ export default class Register extends Component {
             password:this.state.password
         }
 
-        console.log(regInfo)
+        axios.post("/users/register", regInfo)
+        //.then(()=>alert(123))
     }
 
     handleUsername = (e) => this.setState({username:e.target.value})
