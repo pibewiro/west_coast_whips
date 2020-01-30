@@ -13,7 +13,7 @@ router.post("/register", async (req,res)=>{
         const res = await client.query(query)
         const result = res.rows
         console.log(result)
-        // return response.status(200).json(result)
+        return response.status(200).json(result)
     }
 
     catch(err){
