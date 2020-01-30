@@ -4,7 +4,7 @@ const {Pool} = require('pg');
 const env = require("../config/.env")
 const pool = new Pool(env);
 
-router.post("/register", async (req,res)=>{
+router.post("/register", async (req,response)=>{
     const client = await pool.connect()
     console.log(req.body)
     try
